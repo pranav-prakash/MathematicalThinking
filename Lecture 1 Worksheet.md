@@ -111,7 +111,7 @@ Answer:
 
 Counterexample:
 
-PrimeQ[2*3*5*7*11*13 + 1] = false
+PrimeQ[2 * 3 * 5 * 7 * 11 * 13 + 1] = false
 
 ---
 
