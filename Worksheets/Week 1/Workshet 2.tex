@@ -8,15 +8,68 @@
 \author{Pranav Prakash}
 \maketitle
 
+\newcommand\answerbox[2][1.25in]{\hspace*{\fill}[\makebox[#1]{#2}]}
 
 \begin{enumerate}
   \item Simplify the following symbolic statements
   \begin{enumerate}[(a)]
-  	\item $(\pi > 0) \wedge (\pi < 10)$ \hfill [Answer: $0 < \pi < 10$]
-  	\item $(p \geq 7) \wedge (p < 12)$ \hfill [Answer: $7 \leq p < 12$]
+  	\item $(\pi > 0) \wedge (\pi < 10)$ \answerbox{$0 < \pi < 10$}
+  	\item $(p \geq 7) \wedge (p < 12)$ \answerbox{$7 \leq p < 12$}
+    \item $(x > 5) \wedge (x < 7)$ \answerbox{$5 < x < 7$}
+    \item $(x < 4) \wedge (x < 6)$ \answerbox{$x < 4$}
+    \item $(y < 45) \wedge (y^2 < 9)$ \answerbox{$-3 < y < 3$}
+    \item $(x \geq 0) \wedge (x \leq 0)$ \answerbox{$x = 0$}
   \end{enumerate}
-  \item Some more text
-  \item blah, blah.
+  \setcounter{enumi}{2}
+  \item As conjunction is associative for $\phi_1 \wedge \phi_2 \wedge \cdots \wedge \phi_n$ to be true all of the conjuncts need to be true
+  \item Similarly, for the statement to be false only one of the conjuncts needs to be false
+  \item Simplify the following symbolic statements
+  \begin {enumerate}[(a)]
+  	\item $(\pi > 3) \vee (\pi > 10)$ \answerbox {$\pi > 3$}
+    \item $(x < 0) \vee (x > 0)$ \answerbox {$x \neq 0$}
+    \item $(x > 0) \vee (x = 0)$ \answerbox {$x \geq 0$}
+    \item $(x > 0) \vee (x \geq 0)$ \answerbox{$x \geq 0$}
+    \item $(x > 3) \vee (x^2 > 9)$ \answerbox{$x^2 > 9$}
+  \end {enumerate}
+  \setcounter{enumi}{6}
+  \item As disjunction is associative for $\phi_1 \vee \phi_2 \vee \cdots \vee \phi_n$ to be true only one of the disjuncts need to be true
+  \item Similarly, as disjunction is associative all of the disjuncts need to be false for the statement to be false
+  \item Simplify the following symbolic statements
+  \begin {enumerate}[(a)]
+  	\item $\neg(\pi > 3.2)$ \answerbox{$\pi \leq 3.2$}
+  	\item $\neg(x < 0)$ \answerbox{$x \geq 0$}
+  	\item $\neg(x^2 > 0)$ \answerbox{$x = 0$}
+  	\item $\neg(x = 1)$ \answerbox{$x \neq 1$}
+  	\item $\neg\neg\psi$ \answerbox{$\psi$}
+  \end {enumerate}
+  \setcounter{enumi}{10}
+  \item Let $D$ be ``The dollar is strong", $Y$ be ``The Yuan is strong", and $T$ be ``New US-China trade agreement signed." Represents the following statements using symbolic notation:
+  \begin{enumerate}[(a)]
+  	\item ``Dollar and Yuan both strong" \answerbox{$D \wedge Y$}
+  	\item ``Yuan weak despite new trade agreement, but Dollar remains strong" \answerbox{$\neg Y \wedge T \wedge D$}
+  	\item ``Dollar and Yuan can't both be strong at the same time"\\
+  	\answerbox{$(D \wedge \neg Y) \vee (\neg Y \wedge D)$}
+  	\begin{enumerate}[(i)]
+  		\item Note that this problem can be quickly stated using an exclusive-or (xor) which has symbol $\oplus$. However, since math by default uses an inclusive-or we must define an xor in terms of the standard logical symbols: conjunction, disjunction, and negation.
+  		\item The properties of the xor are that when either one of the predicates are true the result is true, but when both are true or both are false then the result is false.
+  		\item We go about constructing the equivalent symbolic expression to $\phi \oplus \psi$ as follows:
+  		\item We start with the standard disjunction (inclusive-or) in the middle of two predicates: $[P] \vee [Q]$
+  		\item We need to find a way to make both $P$ and $Q$ false when $\phi$ and $\psi$ are both true or both false.
+  		\item This can be done with $\phi \wedge \neg\psi$ and $\neg\phi \wedge \psi$
+  		\item This also results in one of P or Q being true when one of $\phi$ or $\psi$ is true
+  		\item The equivalent statement is thus $(\phi \wedge \neg\psi) \vee (\neg\phi \wedge \psi)$
+ 	\end{enumerate}
+ 	\item ``New trade agreement does not prevent fall in Dollar and Yuan" \answerbox{$T \wedge \neg D \wedge \neg Y$}
+ 	\item ``US--China trade agreement fails but both currencies remain strong" \answerbox{$\neg T \wedge D \wedge Y$}
+  \end{enumerate}
+  \item Do ``Not guilty" and ``$\neg \text{guilty}$" mean the same?
+  \begin{enumerate}[(a)]
+  	\item ``Not guilty" only means that they have failed to prove guilt, and not that the person is actually innocent whereas ``$\neg \text{guilty}$" means that person \textit{is} innocent
+  \end{enumerate}
+  \item How can you state ``I was not displeased with the movie." in formal language
+  \begin{enumerate}[(a)]
+  	\item You would need to introduce various other levels of pleasure such as $S$ as satisfied, $E$ as enthralled, and so on. Then take the disjunction of all of those.
+  \end{enumerate}
 \end{enumerate}
 
 \end{document}
