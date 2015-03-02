@@ -45,20 +45,11 @@
   \setcounter{enumi}{10}
   \item Let $D$ be ``The dollar is strong", $Y$ be ``The Yuan is strong", and $T$ be ``New US-China trade agreement signed." Represents the following statements using symbolic notation:
   \begin{enumerate}[(a)]
-  	\item ``Dollar and Yuan both strong" \answerbox{$D \wedge Y$}
+  	\item ``Dollar and Yuan both strong"
+  		\answerbox{$D \wedge Y$}
   	\item ``Yuan weak despite new trade agreement, but Dollar remains strong" \answerbox{$\neg Y \wedge T \wedge D$}
-  	\item ``Dollar and Yuan can't both be strong at the same time"\\
-  	\answerbox{$(D \wedge \neg Y) \vee (\neg Y \wedge D)$}
-  	\begin{enumerate}[(i)]
-  		\item Note that this problem can be quickly stated using an exclusive-or (xor) which has symbol $\oplus$. However, since math by default uses an inclusive-or we must define an xor in terms of the standard logical symbols: conjunction, disjunction, and negation.
-  		\item The properties of the xor are that when either one of the predicates are true the result is true, but when both are true or both are false then the result is false.
-  		\item We go about constructing the equivalent symbolic expression to $\phi \oplus \psi$ as follows:
-  		\item We start with the standard disjunction (inclusive-or) in the middle of two predicates: $[P] \vee [Q]$
-  		\item We need to find a way to make both $P$ and $Q$ false when $\phi$ and $\psi$ are both true or both false.
-  		\item This can be done with $\phi \wedge \neg\psi$ and $\neg\phi \wedge \psi$
-  		\item This also results in one of P or Q being true when one of $\phi$ or $\psi$ is true
-  		\item The equivalent statement is thus $(\phi \wedge \neg\psi) \vee (\neg\phi \wedge \psi)$
- 	\end{enumerate}
+  	\item ``Dollar and Yuan can't both be strong at the same time" \\
+  		\answerbox{$\neg(D \wedge Y)$}
  	\item ``New trade agreement does not prevent fall in Dollar and Yuan" \answerbox{$T \wedge \neg D \wedge \neg Y$}
  	\item ``US--China trade agreement fails but both currencies remain strong" \answerbox{$\neg T \wedge D \wedge Y$}
   \end{enumerate}

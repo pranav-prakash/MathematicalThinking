@@ -1,0 +1,94 @@
+\documentclass[]{article}
+\usepackage{enumerate}
+\usepackage{amsmath}
+
+\begin{document}
+
+\title{Worksheet 2}
+\author{Pranav Prakash}
+\maketitle
+
+\newcommand\answerbox[2][1.25in]{\hspace*{\fill}[\makebox[#1]{#2}]}
+\newcommand*\xor{\oplus}
+
+\section {Selected Problems}
+
+\begin{enumerate}
+	\setcounter{enumi}{5}
+	\item Give a denial (negation) of the following statements:
+	\begin{enumerate}[(a)]
+		\item $34159$ is a prime number
+			\hspace*{\fill} $45159$ is not a prime number
+		\item Roses are red and violets are blue \\
+			\hspace*{\fill} Roses are not red, or violets are not blue
+		\item If there are no hamburgers, I'll have a hot dog \\
+			\hspace*{\fill} I will not eat hot-dogs even when there are no burgers
+		\item Fred will go but he will not player \\
+			\hspace*{\fill} Either Fred will go or he will not play
+		\item The number x is either negative or greater than $10$
+			\hspace*{\fill} $0 \leq x \leq 10$
+		\item We will win the first game or the second \\
+			\hspace*{\fill} We will win neither the first game nor the second
+	\end{enumerate}
+	\setcounter{enumi}{5}
+	\item Write down the contrapositives for the statements
+	\begin{enumerate}[(a)]
+		\item If two rectangles are congruent, they have the same area \\
+			\hspace*{\fill} If two rectangles do not have the same area they are not congruent
+		\item If a triangle with sides $a, b, c$ is right-angled than $a^2 + b^2 = c^2$ \\
+			\hspace*{\fill} If $a^2 + b^2 \neq c^2$ then the triangle is not right-angled
+		\item If $2^n - 1$ is prime then so is $n$ \\
+			\hspace*{\fill} If $n$ is not prime then $2^n - 1$ is not prime
+		\item If the Yuan rises the Dollar will fall \\
+			\hspace*{\fill} If the dollar did not fall the Yuan did not rise
+	\end{enumerate}
+\end{enumerate}
+
+\section {Optional Problems}
+
+\begin{enumerate}
+	\item Express $\phi$ unless $\psi$ in terms of logical operators
+		\answerbox{$\phi \Leftrightarrow \psi$}
+	\setcounter{enumi}{2}
+	\item Express $\phi \xor \psi$ in terms of logical operators 
+		\answerbox{$(\phi \wedge \neg \psi) \vee (\neg \phi \wedge \psi)$}
+	\setcounter{enumi}{4}
+	\item Complete the truth table for mod-2 arithmetic \\
+		\begin{center} \begin{tabular}{c c | c c}
+			$M$ & $N$ & $M \times N$ & $M + N$ \\ \hline
+			1 & 1 & 1 & 0 \\
+			1 & 0 & 0 & 1 \\
+			0 & 1 & 0 & 1 \\
+			0 & 0 & 0 & 0
+		 \end{tabular} \end{center}
+	\item In the above truth table, interpret $1$ as T and $0$ as F
+	\begin{enumerate}[(a)]
+		\item What logical operator corresponds to $\times$
+			\answerbox{AND}
+		\item What logical operator corresponds to $+$
+			\answerbox{XOR}
+		\item Does $\neg$ corresponds to $-$ \\
+			\hspace*{\fill} Yes, corresponds to subtraction under modulo $2$ 
+	\end{enumerate}
+		\item In the above truth table, interpret $1$ as F and $0$ as T
+	\begin{enumerate}[(a)]
+		\item What logical operator corresponds to $\times$
+			\answerbox{OR}
+		\item What logical operator corresponds to $+$
+			\answerbox{XNOR/equivalence}
+		\item Does $\neg$ corresponds to $-$ \\
+			\hspace*{\fill} Yes, corresponds to subtraction under modulo $2$ 
+	\end{enumerate}
+	\item Four cards are placed on the table in front of you. You are told (truthfully) that each has a letter printed on one side and a digit on the other, but of course you can only see one face of each. What you see is: \begin{center} B E 4 7 \end{center}
+		You are now told that the cards you are looking at were chosen to follow the rule “If there is a vowel on one side, then there is an odd number on the other side.” What is the least number of cards you have to turn over to verify this rule, and which cards do you in fact have to turn over?
+		\begin{enumerate}
+			\item Two cards, E and 4:
+			\item Turn over E to make sure that there is an odd number on the other side.
+			\item Turn over 4 to make sure that there is not a vowel on the other side
+			\item You do not need to turn over $B$ or $4$ as having a consonant and an odd number are allowed.
+		\end{enumerate}
+		\setcounter{enumi}{10}
+		\item You are in charge of a party where there are young people. Some are drinking alcohol, others soft drinks. Some are old enough to drink alcohol legally, others are under age. You are responsible for ensuring that the drinking laws are not broken, so you have asked each person to put his or her photo ID on the table. At one table are four young people. One person has a beer, another has a Coke, but their IDs happen to be face down so you cannot see their ages. You can, however, see the IDs of the other two people. One is under the drinking age, the other is above it. Unfortunately, you are not sure if they are drinking Seven-up or vodka and tonic. Which IDs and/or drinks do you need to check to make sure that no one is breaking the law?
+\end{enumerate}
+
+\end{document}

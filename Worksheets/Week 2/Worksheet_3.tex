@@ -1,0 +1,33 @@
+\documentclass[]{article}
+\usepackage{enumerate}
+\usepackage{amsmath}
+
+\begin{document}
+
+\title{Worksheet 2}
+\author{Pranav Prakash}
+\maketitle
+
+\newcommand\answerbox[2][1.25in]{\hspace*{\fill}[\makebox[#1]{#2}]}
+
+\begin{enumerate}
+	\item Let $D$ be the statement ``The dollar is strong", $Y$ the statement ``The Yuan is strong" and T the statement ``New US–-China trade agreement signed". Express in logical notation:
+	\begin{enumerate}[(a)]
+		\item New trade agreement will lead to strong currencies in both countries \\\answerbox{$T \Rightarrow (D \wedge Y)$}
+		\item Strong Dollar means a weak Yuan
+			\answerbox{$D \Rightarrow \neg Y$}
+		\item Trade agreement fails on news of weak Dollar
+			\answerbox{$\neg D \Rightarrow \neg T$}
+		\item If new the trade agreement is signed, Dollar and Yuan can't both be strong \answerbox{$T \Rightarrow \neg(D \wedge Y)$}
+		\item Dollar weak but Yuan strong after trade agreement \\
+			\answerbox{$T \Rightarrow \neg D \wedge Y$}
+		\item If trade agreement signed, a rise in the Yuan will result in a fall in the Dollar
+			\answerbox{$T \Rightarrow (Y \Rightarrow \neg D)$}
+		\item New trade agreement means Dollar and Yuan will rise and fall together
+			\hspace*{\fill} [$T \Rightarrow ((D \wedge Y) \vee (\neg D \wedge \neg Y))$]
+		\item New trade agreement will be good for only one side \\
+			\hspace*{\fill} [$T \Rightarrow ((D \wedge \neg Y) \vee (\neg D \wedge Y))$]
+	\end{enumerate}
+\end{enumerate}
+
+\end{document}
